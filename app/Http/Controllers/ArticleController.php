@@ -11,4 +11,12 @@ class ArticleController{
         jkkkkkkkkk
         jkkkkkkkkkffffffff
     }
+
+    public function index(){
+        
+    }
+
+    public function index_2(){
+        
+    }
 }
