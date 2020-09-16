@@ -24,5 +24,5 @@ $router->get('index' , 'IndexController@index');
 
 $router->get('article/{id}' , 'ArticleController@index_g');
 $router->post('article' , 'ArticleController@index_p');
-$router->put('article/{id}' , 'ArticleController@index_put');
+$router->put('article/{id}/{title}' , 'ArticleController@index_put');
 $router->delete('article/{id}' , 'ArticleController@index_d');
