@@ -1,10 +1,9 @@
 <?php
 namespace App\Http\Models;
+use Illuminate\Database\Eloquent\Model;
 
-class Article{
 
-    public function getData($id){
-        $sql = "select * from article where id = $id";
+class Article extends Model{
 
-    }
+
 }

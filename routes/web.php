@@ -18,11 +18,11 @@ $router->get('/', function () use ($router) {
 $router->get('index' , 'IndexController@index');
 
 //$router->get('article/{id}' , 'IndexController@index_g');
-$router->post('article' , 'IndexController@index_p');
+//$router->post('article' , 'IndexController@index_p');
 //$router->put('article/{id}' , 'IndexController@index_put');
 //$router->delete('article/{id}' , 'IndexController@index_d');
 
 $router->get('article/{id}' , 'ArticleController@index_g');
-//$router->post('article' , 'ArticleController@index_p');
+$router->post('article' , 'ArticleController@index_p');
 $router->put('article/{id}' , 'ArticleController@index_put');
 $router->delete('article/{id}' , 'ArticleController@index_d');
