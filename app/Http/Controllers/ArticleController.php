@@ -91,5 +91,9 @@ class ArticleController extends Controller{
         var_dump($res);
     }
 
+    public function test(){
+        
+    }
+
 
 }
