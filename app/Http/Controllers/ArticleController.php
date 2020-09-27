@@ -21,7 +21,8 @@ class ArticleController extends Controller{
 //        var_dump($res);
 //
 //        3
-//        $res = Article::select('title')->where('id' , $id)->get();
+//        $res = Article::select('title','id')->where('id' , $id)->get();
+//        $res = Article::select('title','id')->get();
 //        var_dump($res);
 //        var_dump($res->toArray());
 
