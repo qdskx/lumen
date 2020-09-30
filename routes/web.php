@@ -26,3 +26,12 @@ $router->get('article/{id}' , 'ArticleController@index_g');
 $router->post('article' , 'ArticleController@index_p');
 $router->put('article/{id}/{title}' , 'ArticleController@index_put');
 $router->delete('article/{id}' , 'ArticleController@index_d');
+
+
+//中直电子商城
+$router->group(['namespace'=>'zzshop','prefix'=>'zzshop'] , function() use ($router){
+    $router->get('orderlist' , 'OrderlistController@orderList');
+    $router->get('test' , 'OrderlistController@test');
+    $router->get('send' , 'OrderlistController@send');
+    $router->get('sendEmail' , 'TemsgController@sendEmail');
+});
