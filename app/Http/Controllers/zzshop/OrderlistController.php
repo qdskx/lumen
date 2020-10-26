@@ -61,7 +61,7 @@ class OrderlistController extends Controller{
     }
 
     public function test(){
-        $res = file_get_contents('1.php');
+        $res = file_get_contents('VerifyCsrfToken.php');
         $single_order_res = preg_match_all('/<div[\s]*class="single-order">[\s]*<div class="order-profile">(.*)[\s]*<\/div>/' , $res , $single_order);
 
         var_dump($single_order_res);

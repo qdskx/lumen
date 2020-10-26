@@ -6,7 +6,8 @@ use App\Http\Models\Article;    // 需要去掉bootstrap/app.php的$app->withElo
 use DB;                         // 需要去掉bootstrap/app.php的$app->withFacades()的注释;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller{
+
+class ArticleController{
 
     public function index_g($id){
 
@@ -21,11 +22,14 @@ class ArticleController extends Controller{
 //        var_dump($res);
 //
 //        3
-//        $res = Article::select('title','id')->where('id' , $id)->get();
-//        $res = Article::select('title','id')->get();
-//        var_dump($res);
-//        var_dump($res->toArray());
+//        $res = Article::select('title','id')->where('id' , $id)->get()->toArray();
+        $res = Article::select('title','id')->get()->toArray();
+        var_dump($res);
 
+//        4 按照i、
+//id查找
+//        $res = Article::query()->select('title')->find(3)->toArray();
+//        var_dump($res);
 
 //        DB
 //        1
@@ -49,6 +53,8 @@ class ArticleController extends Controller{
 
     public function index_p(Request $request){
         $data = $request->all();
+        var_dump($data);
+        die;
 
 //        model
 //        1
@@ -66,12 +72,18 @@ class ArticleController extends Controller{
 
     }
 
-    public function index_put($id , $title){
-
+    public function index_put(Request $request , $id = 'eeeeee' , $title = 'vsdbdf'){
+        var_dump('wwwwwwwww');
+die;
         $data['title'] = $title;
 
 //        Model
+//        1
         $res = Article::where('id' , $id)->update($data);
+
+//        2
+//        $res = Article::where('id' , $id)->decrement('clicks');
+
         var_dump('res' , $res);     //1
 
 
@@ -93,7 +105,7 @@ class ArticleController extends Controller{
     }
 
     public function test(){
-        
+        return view('form');
     }
 
 

@@ -11,11 +11,17 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+// 生成APP_KEY
+//$router->get('/key', function() {
+//    return md5('key');
+//});
+
+//$router->get('/', function () use ($router) {
+//    return $router->app->version();
+//});
 
 $router->get('index' , 'IndexController@index');
+$router->get('test' , 'ArticleController@test');
 
 //$router->get('article/{id}' , 'IndexController@index_g');
 //$router->post('article' , 'IndexController@index_p');
@@ -24,7 +30,8 @@ $router->get('index' , 'IndexController@index');
 
 $router->get('article/{id}' , 'ArticleController@index_g');
 $router->post('article' , 'ArticleController@index_p');
-$router->put('article/{id}/{title}' , 'ArticleController@index_put');
+//$router->put('article/{id}/{title?}' , 'ArticleController@index_put');
+$router->put('article' , 'ArticleController@index_put');
 $router->delete('article/{id}' , 'ArticleController@index_d');
 
 
