@@ -72,14 +72,16 @@ class ArticleController{
 
     }
 
-    public function index_put(Request $request , $id = 'eeeeee' , $title = 'vsdbdf'){
+//    public function index_put(Request $request , $id = 'eeeeee' , $title = 'vsdbdf'){
+    public function index_put($id , $title ){
         var_dump('wwwwwwwww');
-die;
+//        var_dump($request->all());
+//die;
         $data['title'] = $title;
 
 //        Model
 //        1
-        $res = Article::where('id' , $id)->update($data);
+        $res = Article::where('aid' , $id)->update($data);
 
 //        2
 //        $res = Article::where('id' , $id)->decrement('clicks');
